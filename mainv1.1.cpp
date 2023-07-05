@@ -91,7 +91,7 @@ void endGame(int x)
 
 int main()
 {
-	bool isGameOver = false;
+	bool gameOver = true;
 	char playAgain;
 
 	std::cout << "Welcome to a friendly game of Rock-Paper-Scissors!" << std::endl;
@@ -99,7 +99,7 @@ int main()
 	std::cout << "Rock beats Scissors - Paper beats Rock - Scissors beats Paper." << std::endl;
 	std::cout << "Good Luck!" << std::endl;
 
-	while (!isGameOver)
+	while (gameOver)
 	{
 
 		char player = playerVal();
@@ -113,11 +113,11 @@ int main()
 
 		if (playAgain == 'n')
 		{
-			isGameOver = true;
+			gameOver = false;
 		}
 		else
 		{
-			isGameOver = false;
+			gameOver = true;
 		}
 	}
 }
